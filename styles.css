@@ -1,3 +1,7 @@
+body {
+    background-color: pink;
+}
+
 .link {
     background-color: #2bbd52;
     width: 50px;
@@ -13,51 +17,6 @@
 }
 
 #image-carousel {
-
-display: flex;
-
-border: 2px solid black;
-
-overflow-x: hidden;
-
-width: 50%;
-
-margin-top: 1rem;
-
-margin-bottom: 1rem;
-
-margin-left: auto;
-
-margin-right: auto;
-
-}
-
-
-#carousel-images {
-
-display: flex;
-
-width: 100%;
-
-overflow-x: scroll;
-
-scroll-snap-type: x-mandatory;
-
-}
-
-
-.process-image {
-
-width: 100%;
-
-scroll-snap-align: start;
-
-object-fit: cover;
-
-}
-
-
-   #image-carousel {
 
 display: flex;
 
