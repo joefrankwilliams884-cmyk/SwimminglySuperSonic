@@ -1,63 +1,84 @@
-body {
-    background-color: pink;
+/* Make sizing behave properly */
+* {
+    box-sizing: border-box;
 }
 
+/* Remove default spacing */
+body {
+    background-color: pink;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Make ALL images responsive */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Link buttons */
 .link {
     background-color: #2bbd52;
-    width: 50px;
-    height: 25px;
+    padding: 10px 20px;
     color: #c2402d;
     border: 2px solid #323edb;
     border-radius: 15px;
+    margin: 10px;
+    text-align: center;
 }
 
-#link-container{
+/* Make links look nicer */
+.link a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Center link container */
+#link-container {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap; /* allows wrapping on small screens */
 }
 
+/* Carousel */
 #image-carousel {
-
-display: flex;
-
-border: 2px solid black;
-
-overflow-x: hidden;
-
-width: 50%;
-
-margin-top: 1rem;
-
-margin-bottom: 1rem;
-
-margin-left: auto;
-
-margin-right: auto;
-
+    display: flex;
+    border: 2px solid black;
+    overflow: hidden;
+    width: 90%; /* was 50% — too small for mobile */
+    margin: 1rem auto;
 }
 
-
+/* Carousel image container */
 #carousel-images {
-
-display: flex;
-
-width: 100%;
-
-overflow-x: scroll;
-
-scroll-snap-type: x-mandatory;
-
+    display: flex;
+    width: 100%;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
 }
 
-
+/* Individual images */
 .process-image {
-
-width: 100%;
-
-scroll-snap-align: start;
-
-object-fit: cover;
-
+    min-width: 100%;
+    scroll-snap-align: start;
+    object-fit: cover;
 }
 
+/* 📱 Mobile adjustments */
+@media (max-width: 768px) {
 
+    #link-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .link {
+        width: 80%;
+        max-width: 300px;
+    }
+
+    #image-carousel {
+        width: 100%;
+    }
+}
